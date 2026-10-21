@@ -1,0 +1,124 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html,
+body {
+  background: #16121f;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.glass {
+  background: rgba(28, 20, 44, 0.34);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 24px 60px -24px rgba(20, 10, 30, 0.45);
+}
+.glass-light {
+  background: rgba(247, 248, 250, 0.62);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 44px -22px rgba(16, 32, 51, 0.4);
+}
+.text-shadow {
+  text-shadow: 0 1px 14px rgba(30, 16, 40, 0.38);
+}
+.vignette {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 55%, rgba(24, 12, 34, 0.42) 100%);
+}
+/* Sound bars */
+.sound-bar {
+  transform-origin: bottom;
+  transform: scaleY(0.35);
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes sound-bar {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.sound-bars[data-playing='true'] .sound-bar {
+  animation: sound-bar 900ms ease-in-out infinite;
+}
+.sound-bars[data-playing='true'] .sound-bar:nth-child(2) {
+  animation-delay: -300ms;
+}
+.sound-bars[data-playing='true'] .sound-bar:nth-child(3) {
+  animation-delay: -600ms;
+}
+/* Scroll hint */
+@keyframes scroll-hint {
+  0% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+}
+.scroll-hint-dot {
+  animation: scroll-hint 1600ms cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+/* Overlays */
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.anim-overlay-in {
+  animation: overlay-in 240ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@keyframes loader-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(0.7);
+  }
+}
+.loader-line {
+  transform-origin: left;
+  animation: loader-grow 900ms linear both;
+  transition: transform 250ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.loader-line[data-ready='true'] {
+  animation: none;
+  transform: scaleX(1);
+}
+.project-tilt {
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  transform-style: preserve-3d;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sound-bars[data-playing='true'] .sound-bar,
+  .scroll-hint-dot {
+    animation: none !important;
+  }
+  .anim-overlay-in {
+    animation-duration: 1ms;
+  }
+}
