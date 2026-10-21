@@ -25,6 +25,28 @@ export const CONTENT = {
     'Explore further to discover my work, ideas, and approach to design.'
   ],
   skills: ['Creative Thinking', 'Problem-Solving', 'User Research', 'Collaboration', 'Visual Communication'],
+  toolkit: [
+    {
+      label: 'Design',
+      count: '06',
+      items: ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe After Effects', 'Adobe Audition', 'Figma', 'Sketch']
+    },
+    {
+      label: 'AI',
+      count: '05',
+      items: ['ChatGPT', 'Claude', 'Cursor', 'Google Antigravity', 'Claude Code']
+    },
+    {
+      label: 'Product',
+      count: '06',
+      items: ['UX Research', 'UI Design', 'Prototyping', 'Design Systems', 'Interaction Design', 'UX Writing']
+    },
+    {
+      label: 'Collaboration',
+      count: '04',
+      items: ['Developer Collaboration', 'Product Thinking', 'Ideation', 'Design Critique']
+    }
+  ],
   projects: [
   {
     id: 'hallmark',

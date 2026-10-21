@@ -2,6 +2,7 @@ import React from 'react';
 import { HeroTitle } from './HeroTitle';
 import { AboutCard } from './AboutCard';
 import { SkillsList } from './SkillsList';
+import { ToolkitList } from './ToolkitList';
 import { ProjectCards } from './ProjectCards';
 import { ContactPanel } from './ContactPanel';
 import { ScrollHint } from './ScrollHint';
@@ -14,6 +15,7 @@ export function Overlay({ scroll }: {scroll: ScrollRef;}) {
       <HeroTitle scroll={scroll} />
       <AboutCard scroll={scroll} />
       <SkillsList scroll={scroll} />
+      <ToolkitList scroll={scroll} />
       <ProjectCards scroll={scroll} />
       <ContactPanel scroll={scroll} />
       <ScrollHint scroll={scroll} />

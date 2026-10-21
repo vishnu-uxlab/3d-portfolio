@@ -17,6 +17,7 @@ export const NAV_LINKS = [
 { label: 'Home', progress: 0 },
 { label: 'About', progress: 0.18 },
 { label: 'Skills', progress: 0.28 },
+{ label: 'Toolkit', progress: 0.51 },
 { label: 'Work', progress: 0.6 },
 { label: 'Contact', progress: 0.88 }];
 
