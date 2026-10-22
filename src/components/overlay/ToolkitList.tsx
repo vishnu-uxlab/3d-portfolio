@@ -27,7 +27,7 @@ export function ToolkitList({ scroll }: {scroll: ScrollRef;}) {
     <section
       aria-labelledby="toolkit-heading"
       className="pointer-events-none fixed inset-x-4 top-[16vh] z-10 md:inset-x-auto md:right-[5vw] md:top-1/2 md:w-[min(680px,50vw)] md:-translate-y-1/2">
-      <div ref={root} style={{ opacity: 0, visibility: 'hidden' }} className="glass-toolkit rounded-[28px] px-4 py-4 md:px-7 md:py-7">
+      <div ref={root} style={{ opacity: 0, visibility: 'hidden' }} className="glass-profile w-full rounded-[28px] px-4 py-4 md:px-7 md:py-7">
       <h2
         id="toolkit-heading"
         className="text-[clamp(26px,3.2vw,42px)] font-bold leading-[1.05] tracking-[-0.03em] text-white">

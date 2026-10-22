@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { MenuOverlay } from './MenuOverlay';
 
-const AUDIO_SRC = '/audio/ambient.wav';
+const AUDIO_SRC = '/audio/ambient.mp3';
 
 /** Top-right "menu" and "sound" controls. */
 export function TopControls() {

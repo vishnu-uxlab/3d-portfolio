@@ -18,7 +18,7 @@ export function AboutCard({ scroll }: {scroll: ScrollRef;}) {
       aria-labelledby="about-heading"
       className="pointer-events-none fixed inset-x-4 bottom-5 z-10 md:inset-x-auto md:bottom-auto md:left-[6vw] md:top-1/2 md:w-[440px] md:-translate-y-1/2">
       
-      <div ref={ref} style={{ opacity: 0, visibility: 'hidden' }} className="glass rounded-[28px] p-6 text-white md:p-9">
+      <div ref={ref} style={{ opacity: 0, visibility: 'hidden' }} className="glass-profile w-full rounded-[28px] px-4 py-4 text-white md:px-5 md:py-5">
         <h2 id="about-heading" className="text-[13px] font-medium text-white/75 md:text-sm">
           About
         </h2>

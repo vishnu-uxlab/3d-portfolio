@@ -29,7 +29,7 @@ export function ProjectCard({ project, index, total, onOpen }: Props) {
       onPointerMove={onMove}
       onPointerLeave={onLeave}
       aria-label={`Open case study: ${project.title}`}
-      className="project-tilt glass group flex h-full w-full flex-col overflow-hidden rounded-[28px] p-3 text-left text-white outline-none focus-visible:ring-2 focus-visible:ring-white/80">
+      className="project-tilt glass-profile group flex h-full w-full flex-col overflow-hidden rounded-[28px] p-3 text-left text-white outline-none focus-visible:ring-2 focus-visible:ring-white/80">
       
       <div className="relative h-[160px] w-full shrink-0 overflow-hidden rounded-[20px] md:h-auto md:flex-1">
         <img src={project.image} alt="" className="absolute inset-0 h-full w-full object-cover" />
